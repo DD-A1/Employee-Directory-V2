@@ -12,7 +12,7 @@ app.route("/").get((req, res) => {
 app.use("/employees", employeeRouter);
 
 //catch all error handle
-app.use((err, req, res, nest) => {
+app.use((err, req, res, next) => {
   res.status(500).send("Database error occurred");
 });
 

@@ -29,7 +29,7 @@ export function getRandomEmployee() {
 export const addEmployee = (mon) => {
   const lastEmployee = employees[employees.length - 1];
   const newEmployee = { id: lastEmployee.id + 1, ...mon };
-  const employee = employees.find((emp) => emp.id === Number(id));
+  const employee = employee.find((emp) => emp.id === Number(id));
 
   employees.push(newEmployee);
 

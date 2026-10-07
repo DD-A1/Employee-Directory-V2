@@ -11,7 +11,6 @@ const employeeRouter = express.Router();
 employeeRouter
   .route("/")
   .get((req, res) => {
-    const employees = getEmployeeId();
     res.send(employees);
   })
 
@@ -22,7 +21,7 @@ employeeRouter
 
     const { name } = req.body;
     if (!name) {
-      return res.status(400).send("New employee must have a name and type");
+      return res.status(400).send("New employee must have a name");
     }
 
     //add employee
